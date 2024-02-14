@@ -1,0 +1,53 @@
+{
+    "@odata.context": "https://myaisrch12313.search.windows.net/$metadata#indexers/$entity",
+    "@odata.etag": "\"0x8DC2D46026061E2\"",
+    "name": "indexer1707903527638",
+    "description": null,
+    "dataSourceName": "mydatasource321",
+    "skillsetName": "skillset1707902593342",
+    "targetIndexName": "cm-index",
+    "disabled": null,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": null,
+      "maxFailedItemsPerBatch": null,
+      "base64EncodeKeys": null,
+      "configuration": {
+        "imageAction": "generateNormalizedImages"
+      }
+    },
+    "fieldMappings": [
+      {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "fileName",
+        "mappingFunction": null
+      },
+      {
+        "sourceFieldName": "metadata_storage_path",
+        "targetFieldName": "fileNameEncoded",
+        "mappingFunction": {
+          "name": "base64Encode",
+          "parameters": {
+            "useHttpServerUtilityUrlTokenEncode": true
+          }
+        }
+      }
+    ],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/merged_text",
+        "targetFieldName": "text"
+      },
+      {
+        "sourceFieldName": "/document/piiEntities",
+        "targetFieldName": "piiEntities"
+      },
+      {
+        "sourceFieldName": "/document/languageCode",
+        "targetFieldName": "languageCode"
+      }
+    ],
+    "cache": null,
+    "encryptionKey": null
+  }
