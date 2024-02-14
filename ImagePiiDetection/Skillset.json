@@ -1,7 +1,7 @@
 {
   "@odata.context": "https://myaisrch12313.search.windows.net/$metadata#skillsets/$entity",
   "@odata.etag": "\"0x8DC2D45F5720C15\"",
-  "name": "skillset1707902593342",
+  "name": "cm-skillset",
   "description": "",
   "skills": [
     {
